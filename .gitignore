@@ -1,0 +1,13 @@
+# ignore everything
+/*
+/*/
+.*
+/*/.*
+/ranger/plugins/
+/tmux/plugins/
+
+# ... but these:
+!/tmux/
+!/ranger/
+!README.md
+!.gitignore
