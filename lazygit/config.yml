@@ -1,0 +1,14 @@
+gui:
+  language: 'en'
+  border: 'rounded'
+  theme:
+    lightTheme: false
+    activeBorderColor:
+      - cyan
+      - bold
+    selectedLineBgColor:
+      - default
+git:
+  paging:
+    colorArg: always
+    pager: delta  --dark --paging=never --24-bit-color=never --syntax-theme="OneHalfDark"

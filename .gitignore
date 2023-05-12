@@ -5,9 +5,11 @@
 /*/.*
 /ranger/plugins/
 /tmux/plugins/
+/lazygit/state.yml
 
 # ... but these:
 !/tmux/
 !/ranger/
 !README.md
 !.gitignore
+!/lazygit/
