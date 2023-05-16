@@ -1,15 +1,29 @@
 # ignore everything
 /*
-/*/
-.*
-/*/.*
-/ranger/plugins/
-/tmux/plugins/
-/lazygit/state.yml
 
-# ... but these:
-!/tmux/
-!/ranger/
+# do not ignore the README.md and .gitignore
 !README.md
 !.gitignore
-!/lazygit/
+
+# do not ignore /tmux/.tmux.conf
+!/tmux
+/tmux/*
+!/tmux/.tmux.conf
+
+# do not ignore ranger config
+!/ranger
+/ranger/*
+!/ranger/commands.py
+!/ranger/commands_full.py
+!/ranger/rc.conf
+!/ranger/rifle.conf
+
+# do not ignore lazygit config
+!/lazygit
+/lazygit/*
+!/lazygit/config.yml
+
+# do not ignore zsh config
+!/zsh
+/zsh/*
+!/zsh/.zshrc
