@@ -27,3 +27,4 @@
 !/zsh
 /zsh/*
 !/zsh/.zshrc
+!/zsh/aliasrc

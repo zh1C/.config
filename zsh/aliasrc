@@ -1,0 +1,16 @@
+# this is my zsh aliases.
+# 终端走代理
+alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891'
+alias unproxy='unset https_proxy http_proxy all_proxy'
+
+# neovim alias vim vi 
+alias vim='nvim'
+alias vi='nvim'
+
+# lazygit alias lg
+alias lg='lazygit'
+
+# ranger alias ra
+alias ra='ranger'
+
+alias l='ls -al'

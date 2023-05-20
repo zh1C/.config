@@ -61,3 +61,7 @@ preexec() { echo -ne '\e[5 q'; }
 # Edit line in vim with Ctrl-e.
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
+
+# Load aliases and shortcuts if existent.
+[ -f "$HOME/.config/zsh/shortcutrc" ] && source "$HOME/.config/zsh/shortcutrc"
+[ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
