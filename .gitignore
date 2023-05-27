@@ -8,7 +8,7 @@
 # do not ignore /tmux/.tmux.conf
 !/tmux
 /tmux/*
-!/tmux/.tmux.conf
+!/tmux/tmux.conf.local
 
 # do not ignore ranger config
 !/ranger
