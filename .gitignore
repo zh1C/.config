@@ -28,3 +28,13 @@
 /zsh/*
 !/zsh/.zshrc
 !/zsh/aliasrc
+
+# do not ignore yabai config
+!/yabai
+/yabai/*
+!/yabai/yabairc
+
+# do not igonre skhd config
+!/skhd
+/skhd/*
+!/skhd/skhdrc
