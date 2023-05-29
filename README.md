@@ -2,6 +2,12 @@
 
 这是我的配置文件仓库，包含的软件有zsh、tmux、ranger、lazygit、fzf、yabai等相关配置。
 
+## 软件
+
+- 桌面管理软件：[yabai](https://github.com/koekeishiya/yabai)
+- 快捷键守护进程：[skhd](https://github.com/koekeishiya/skhd)
+- Shell提示符美化：[starship](https://github.com/starship/starship)
+
 ## 准备工作
 
 ### yabai
@@ -63,4 +69,24 @@ skhd --stop-service
 
 # 重启skhd服务
 skhd --restart-service
+```
+
+### starship
+
+[starship](https://github.com/starship/starship)是一个可以定制化的Shell提示符主题。
+
+#### 安装starship
+
+通过`Homebrew`进行安装，安装代码如下：
+
+```shell
+brew install starship
+```
+
+#### 修改starship配置文件路径
+
+将以下环境变量添加到Shell配置文件中，zsh建议添加大`~/.zprofile`中。
+
+```shell
+export STARSHIP_CONFIG=~/example/non/default/path/starship.toml
 ```

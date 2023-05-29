@@ -38,3 +38,8 @@
 !/skhd
 /skhd/*
 !/skhd/skhdrc
+
+# do not ignore starship config
+!/starship
+/starship/*
+!/starship/starship.toml

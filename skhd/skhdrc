@@ -27,6 +27,8 @@ shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 shift + alt - m : yabai -m window --toggle zoom-fullscreen
 # balance out tree of windows
 shift + alt - e : yabai -m space --balance
+# toggle padding and gap
+alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # Moving Windows Around
 
