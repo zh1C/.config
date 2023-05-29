@@ -7,6 +7,7 @@
 - 桌面管理软件：[yabai](https://github.com/koekeishiya/yabai)
 - 快捷键守护进程：[skhd](https://github.com/koekeishiya/skhd)
 - Shell提示符美化：[starship](https://github.com/starship/starship)
+- 终端: [Alacritty](https://github.com/alacritty/alacritty)
 
 ## 准备工作
 
@@ -89,4 +90,12 @@ brew install starship
 
 ```shell
 export STARSHIP_CONFIG=~/example/non/default/path/starship.toml
+```
+
+### Alacritty
+
+通过`Homebrew`进行安装,安装代码如下:
+
+```shell
+brew install --cask alacritty
 ```

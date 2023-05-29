@@ -43,3 +43,8 @@
 !/starship
 /starship/*
 !/starship/starship.toml
+
+# do not igonre alacritty config
+!/alacritty
+/alacritty/*
+!/alacritty/alacritty.yml
