@@ -6,10 +6,11 @@
 
 ## 软件
 
-- 桌面管理软件：[yabai](https://github.com/koekeishiya/yabai)
-- 快捷键守护进程：[skhd](https://github.com/koekeishiya/skhd)
-- Shell提示符美化：[starship](https://github.com/starship/starship)
+- 桌面管理软件: [yabai](https://github.com/koekeishiya/yabai)
+- 快捷键守护进程: [skhd](https://github.com/koekeishiya/skhd)
+- Shell提示符美化: [starship](https://github.com/starship/starship)
 - 终端: [Alacritty](https://github.com/alacritty/alacritty)
+- 音乐插件: [Sleeve](https://replay.software/sleeve)
 
 ## 准备工作
 
