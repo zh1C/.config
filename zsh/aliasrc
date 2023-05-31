@@ -13,4 +13,7 @@ alias lg='lazygit'
 # ranger alias ra
 alias ra='ranger'
 
-alias l='ls -al'
+alias ll='ls -al'
+
+alias ss='source ~/.config/zsh/.zshrc'
+alias sz='source ~/.zprofile'

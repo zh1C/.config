@@ -1,5 +1,7 @@
 # 我的配置文件
 
+![screenshot](./ScreenShot.png)
+
 这是我的配置文件仓库，包含的软件有zsh、tmux、ranger、lazygit、fzf、yabai等相关配置。
 
 ## 软件

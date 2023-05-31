@@ -4,6 +4,7 @@
 # do not ignore the README.md and .gitignore
 !README.md
 !.gitignore
+!ScreenShot.png
 
 # do not ignore /tmux/.tmux.conf
 !/tmux
