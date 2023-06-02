@@ -11,6 +11,7 @@
 - Shell提示符美化: [starship](https://github.com/starship/starship)
 - 终端: [Alacritty](https://github.com/alacritty/alacritty)
 - Git: [lazygit](https://github.com/jesseduffield/lazygit)
+- zsh配置框架: [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - 终端多路复用: [tmux](https://github.com/tmux/tmux)
 - 终端文件管理器: [ranger](https://github.com/ranger/ranger)
 - 音乐插件: [Sleeve](https://replay.software/sleeve)
@@ -28,6 +29,21 @@ brew install tmux
 # pretty tmux
 git clone https://github.com/gpakosz/.tmux.git "$HOME/.config/tmux"
 ln -s "/path/to/oh-my-tmux/.tmux.conf" "$HOME/tmux/tmux.conf"
+```
+
+### ohmyzsh
+
+相关安装过程如下:
+
+```Shell
+# custom directory
+# add $ZSH to .zprofile
+export $ZSH="$HOME/.config/oh-my-zsh"
+
+# install ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install plugins
 ```
 
 ### ranger

@@ -4,11 +4,24 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="$HOME/.config/oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="ys"
+
+# ohmyzsh plugin fzf config
+# export FZF_BASE="/opt/homebrew/bin/fzf"
+# [ -f "$HOME/.config/zsh/fzfrc" ] && source "$HOME/.config/zsh/fzfrc"
+# DISABLE_FZF_AUTO_COMPLETION="false"
+# DISABLE_FZF_KEY_BINDINGS="false"
+
 # zsh-syntax-highlighting must be the last plugin sourced.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git 
+		# fzf 
+		fzf-tab
+		zsh-autosuggestions 
+		zsh-syntax-highlighting
+		)
+
 source $ZSH/oh-my-zsh.sh
 
 # History in cache directory.
@@ -65,3 +78,14 @@ bindkey '^e' edit-command-line
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/zsh/shortcutrc" ] && source "$HOME/.config/zsh/shortcutrc"
 [ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
+
+# Load fzf config if existent.
+# [ -f "$HOME/.config/zsh/fzfrc" ] && source "$HOME/.config/zsh/fzfrc"
+# [ -f "$HOME/.config/zsh/.fzf.sh" ] && source "$HOME/.config/zsh/.fzf.sh"
+
+# starship load
+eval "$(starship init zsh)"
+
+# zoxide load
+export _ZO_DATA_DIR="$HOME/.config/zsh/zoxide"
+eval "$(zoxide init zsh)"
