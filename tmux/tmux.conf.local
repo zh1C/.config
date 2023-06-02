@@ -351,6 +351,10 @@ tmux_conf_copy_to_os_clipboard=false
 
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
+# bin/t config
+bind-key x kill-pane  # skip "kill-pane 1? (y/n)" prompt
+set -g detach-on-destroy off  # don't exit from tmux when closing a session# skip "kill-pane 1? (y/n)" prompt
+bind-key T run-shell "$HOME/.config/zsh/bin/t"
 
 # increase history size
 #set -g history-limit 10000

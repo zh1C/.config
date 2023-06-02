@@ -29,6 +29,7 @@
 /zsh/*
 !/zsh/.zshrc
 !/zsh/aliasrc
+!/zsh/bin
 
 # do not ignore yabai config
 !/yabai
