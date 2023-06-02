@@ -10,9 +10,37 @@
 - 快捷键守护进程: [skhd](https://github.com/koekeishiya/skhd)
 - Shell提示符美化: [starship](https://github.com/starship/starship)
 - 终端: [Alacritty](https://github.com/alacritty/alacritty)
+- Git: [lazygit](https://github.com/jesseduffield/lazygit)
+- 终端多路复用: [tmux](https://github.com/tmux/tmux)
+- 终端文件管理器: [ranger](https://github.com/ranger/ranger)
 - 音乐插件: [Sleeve](https://replay.software/sleeve)
 
 ## 准备工作
+
+### tmux
+
+相关安装配置如下:
+
+```shell
+# install tmux
+brew install tmux
+
+# pretty tmux
+git clone https://github.com/gpakosz/.tmux.git "$HOME/.config/tmux"
+ln -s "/path/to/oh-my-tmux/.tmux.conf" "$HOME/tmux/tmux.conf"
+```
+
+### ranger
+
+相关安装如下:
+
+```shell
+# install ranger
+brew install ranger
+
+# preview windows syntax highlighting
+brew install highlight
+```
 
 ### yabai
 
@@ -89,7 +117,7 @@ brew install starship
 
 #### 修改starship配置文件路径
 
-将以下环境变量添加到Shell配置文件中，zsh建议添加大`~/.zprofile`中。
+将以下环境变量添加到Shell配置文件中，zsh建议添加到`~/.zprofile`中。
 
 ```shell
 export STARSHIP_CONFIG=~/example/non/default/path/starship.toml
@@ -101,4 +129,28 @@ export STARSHIP_CONFIG=~/example/non/default/path/starship.toml
 
 ```shell
 brew install --cask alacritty
+```
+
+### lazygit
+
+通过`Homebrew`进行安装,安装代码如下:
+
+```shell
+brew install lazygit
+
+# 修改配置文件路径,添加到~/.zprofile中
+export XDG_CONFIG_HOME="$HOME/.config"
+```
+
+### Smart switch tmux session
+
+这是一个Shell脚本命令,可以快速的切换Tmux session,通过`t -help`查看更多细节.
+需要依赖[zoxide](https://github.com/ajeetdsouza/zoxide), fzf, tmux和fd.
+
+```Shell
+# install zoxide
+brew install zoxide
+
+# install fd
+brew install fd
 ```
