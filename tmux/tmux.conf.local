@@ -68,6 +68,7 @@ tmux_conf_24b_colour=auto
 tmux_conf_theme=enabled
 
 # default theme
+tmux_conf_theme_colour_0="default"    # transparent
 tmux_conf_theme_colour_1="#080808"    # dark gray
 tmux_conf_theme_colour_2="#303030"    # gray
 tmux_conf_theme_colour_3="#8a8a8a"    # light gray
@@ -150,7 +151,9 @@ tmux_conf_theme_mode_attr="bold"
 
 # status line style
 tmux_conf_theme_status_fg="$tmux_conf_theme_colour_3"
-tmux_conf_theme_status_bg="$tmux_conf_theme_colour_1"
+# tmux_conf_theme_status_bg="$tmux_conf_theme_colour_1"
+# transparent status line
+tmux_conf_theme_status_bg="$tmux_conf_theme_colour_0"
 tmux_conf_theme_status_attr="none"
 
 # terminal title
@@ -261,7 +264,9 @@ tmux_conf_theme_status_left_attr="bold,none,none"
 
 # status right style
 tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
-tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
+# tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
+# transparent status
+tmux_conf_theme_status_right_bg="$tmxu_conf_theme_colour_0,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
 tmux_conf_theme_status_right_attr="none,none,bold"
 
 # pairing indicator
