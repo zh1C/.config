@@ -13,7 +13,11 @@ alias lg='lazygit'
 # ranger alias ra
 alias ra='ranger'
 
-alias ll='ls -al'
+# use exa replace ls
+# brew install exa
+alias l='exa -alh'
+alias li='exa -alh --icons'
+alias tree='exa -alh --tree --icons --level=1'
 
 alias ss='source ~/.config/zsh/.zshrc'
 alias sz='source ~/.zprofile'
