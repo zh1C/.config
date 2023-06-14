@@ -7,6 +7,7 @@
 ## 软件
 
 - 桌面管理软件: [yabai](https://github.com/koekeishiya/yabai)
+- MacOS文件启动器: [Raycast](https://www.raycast.com)
 - 快捷键守护进程: [skhd](https://github.com/koekeishiya/skhd)
 - Shell提示符美化: [starship](https://github.com/starship/starship)
 - 终端: [Alacritty](https://github.com/alacritty/alacritty)

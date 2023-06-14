@@ -100,6 +100,7 @@ launch_service "skhd"
 brew install --cask alacritty
 brew install --cask font-hack-nerd-font
 brew install --cask stats
+brew install --cask raycast
 
 valid_installed "alacritty"
 
