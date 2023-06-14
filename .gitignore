@@ -50,3 +50,8 @@
 !/alacritty
 /alacritty/*
 !/alacritty/alacritty.yml
+
+!/btop
+/btop/*
+!/btop/btop.conf
+!/btop/themes
