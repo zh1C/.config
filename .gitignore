@@ -5,6 +5,7 @@
 !README.md
 !.gitignore
 !ScreenShot.png
+!quickstart.sh
 
 # do not ignore /tmux/.tmux.conf
 !/tmux
@@ -57,3 +58,5 @@
 !/btop/themes
 
 !/neofetch
+
+!/install

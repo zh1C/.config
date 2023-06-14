@@ -16,7 +16,19 @@
 - 终端文件管理器: [ranger](https://github.com/ranger/ranger)
 - 音乐插件: [Sleeve](https://replay.software/sleeve)
 
-## 准备工作
+## 快速安装
+
+可以使用`quickstart.sh`脚本快速安装所需的软件并配置相关环境变量.
+
+```shell
+git clone https://github.com/zh1C/.config.git "$HOME/.config"
+
+cd $HOME/.config
+
+sh ./quickstart.sh
+```
+
+## 单独安装
 
 ### tmux
 
@@ -27,7 +39,7 @@
 brew install tmux
 
 # pretty tmux
-git clone https://github.com/gpakosz/.tmux.git "$HOME/.config/tmux"
+git clone https://github.com/gpakosz/.tmux.git "$HOME/.config/tmux/.tmux"
 ln -s "/path/to/oh-my-tmux/.tmux.conf" "$HOME/tmux/tmux.conf"
 ```
 
