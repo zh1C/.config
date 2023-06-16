@@ -1,4 +1,4 @@
-# !/bin/zsh
+#!/bin/zsh
 
 echo "\033[33mInstalling dotfiles.\033[0m"
 
@@ -10,6 +10,9 @@ if [ "$(uname)" == "Darwin" ]; then
 
 	echo "\033[33mBrewing all the things.\033[0m"
 	source ./install/brew.sh
+
+	echo "\033[33mUpdating OSX settings.\033[0m"
+	source ./install/osx.sh
 fi
 
 echo "\033[33mDone.\033[0m"

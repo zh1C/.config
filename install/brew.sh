@@ -1,4 +1,4 @@
-# !/bin/zsh
+#!/bin/zsh
 
 which brew &>/dev/null
 
@@ -101,6 +101,8 @@ brew install --cask alacritty
 brew install --cask font-hack-nerd-font
 brew install --cask stats
 brew install --cask raycast
+brew install --cask visual-studio-code
+brew install --cask spotify
 
 valid_installed "alacritty"
 
