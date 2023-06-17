@@ -99,6 +99,7 @@ launch_service "skhd"
 # cask
 brew install --cask alacritty
 brew install --cask font-hack-nerd-font
+brew install font-lxgw-wenkai
 brew install --cask stats
 brew install --cask raycast
 brew install --cask visual-studio-code
