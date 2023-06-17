@@ -132,6 +132,12 @@ fi
 if [[ -f "$HOME/Library/Rime/squirrel.custom.yaml" ]]; then
 	rm -f "$HOME/Library/Rime/squirrel.custom.yaml"
 	ln -s "$HOME/.config/rimeconf/squirrel.custom.yaml" "$HOME/Library/Rime/squirrel.custom.yaml"
+fi
+
+if [[ -f "$HOME/Library/Rime/rime_ice.custom.yaml" ]]; then
+	rm -f "$HOME/Library/Rime/rime_ice.custom.yaml"
+	ln -s "$HOME/.config/rimeconf/rime_ice.custom.yaml" "$HOME/Library/Rime/rime_ice.custom.yaml"
+fi
 
 echo "\033[31mFinished Rime configurations. Don't forget to update sync_dir in installation.yml.\033[0m"
 echo "\033[31mNotes:If you cannot use Rime, please log out.\033[0m"

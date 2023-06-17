@@ -396,7 +396,8 @@ patch:
 
     solarized_dark:
       name: 夜光石
-      horizontal: true              # true横排，false竖排
+      text_orientation: horizontal  
+      candidate_list_layout: stacked   # 候选排布：层叠 stacked | 行 linear
       candidate_format: "%c %@ "    # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间
       corner_radius: 6                             # 窗口圆角
       font_point: 21                               # 候选文字大小
