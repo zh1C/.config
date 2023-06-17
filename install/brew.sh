@@ -123,6 +123,16 @@ fi
 echo "\033[32mInstall rime-ice.\033[0m"
 bash $HOME/.config/plum/rime-install iDvel/rime-ice:others/recipes/full
 
+# Create soft link
+if [[ -f "$HOME/Library/Rime/default.custom.yaml" ]]; then
+	rm -f "$HOME/Library/Rime/default.custom.yaml"
+	ln -s "$HOME/.config/rimeconf/default.custom.yaml" "$HOME/Library/Rime/default.custom.yaml"
+fi
+
+if [[ -f "$HOME/Library/Rime/squirrel.custom.yaml" ]]; then
+	rm -f "$HOME/Library/Rime/squirrel.custom.yaml"
+	ln -s "$HOME/.config/rimeconf/squirrel.custom.yaml" "$HOME/Library/Rime/squirrel.custom.yaml"
+
 echo "\033[31mFinished Rime configurations. Don't forget to update sync_dir in installation.yml.\033[0m"
 echo "\033[31mNotes:If you cannot use Rime, please log out.\033[0m"
 
