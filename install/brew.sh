@@ -103,8 +103,27 @@ brew install --cask stats
 brew install --cask raycast
 brew install --cask visual-studio-code
 brew install --cask spotify
+brew install --cask squirrel
 
 valid_installed "alacritty"
+
+echo "\033[33mStart Rime configuration.\033[0m"
+
+echo "\033[32mClone plum.\033[0m"
+git clone --depth=1 https://github.com/rime/plum "$HOME/.config/plum"
+
+echo "\033[32mRemove Rime default configurations.\033[0m"
+
+if [[ -d "$HOME/Library/Rime" ]]; then 
+	rm -rf "$HOME/Library/Rime"
+	mkdir "$HOME/Library/Rime"
+fi
+
+echo "\033[32mInstall rime-ice.\033[0m"
+bash $HOME/.config/plum/rime-install iDvel/rime-ice:others/recipes/full
+
+echo "\033[31mFinished Rime configurations. Don't forget to update sync_dir in installation.yml.\033[0m"
+echo "\033[31mNotes:If you cannot use Rime, please log out.\033[0m"
 
 # tmux
 brew install tmux

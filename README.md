@@ -8,6 +8,8 @@
 
 - 桌面管理软件: [yabai](https://github.com/koekeishiya/yabai)
 - MacOS文件启动器: [Raycast](https://www.raycast.com)
+- MacOS包管理软件: [Homebrew](https://brew.sh)
+- 输入法: [Rime](https://rime.im/)
 - 快捷键守护进程: [skhd](https://github.com/koekeishiya/skhd)
 - Shell提示符美化: [starship](https://github.com/starship/starship)
 - 终端: [Alacritty](https://github.com/alacritty/alacritty)

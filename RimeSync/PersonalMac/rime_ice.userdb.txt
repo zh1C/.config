@@ -1,0 +1,34 @@
+# Rime user dictionary
+#@/db_name	rime_ice
+#@/db_type	userdb
+#@/rime_version	1.8.5
+#@/tick	32
+#@/user_id	PersonalMac
+bu tong 	不同	c=2 d=1.81449 t=32
+ci dian 	词典	c=1 d=0.955997 t=32
+ci ku 	词库	c=1 d=0.909373 t=32
+dan xiang 	单项	c=1 d=0.99005 t=32
+de 	的	c=1 d=0.900325 t=32
+fan ti 	繁体	c=1 d=0.995012 t=32
+ge ren 	个人	c=1 d=0.904837 t=32
+jian ti 	简体	c=1 d=1 t=32
+jin xing 	进行	c=1 d=0.937067 t=32
+jiu 	就	c=0 d=0.0995012 t=32
+jiu kan jian 	就看见	c=0 d=0.0995012 t=32
+jiu kan jiu kan jian kan 	就看就看见看	c=1 d=1 t=32
+kan 	看	c=0 d=0.0995012 t=32
+lu jing 	路径	c=1 d=0.878095 t=32
+pei zhi 	配置	c=1 d=0.980199 t=32
+shi 	是	c=1 d=0.960789 t=32
+shuang xiang 	双向	c=1 d=0.965605 t=32
+tong bu 	同步	c=5 d=4.67771 t=32
+tong guan ban 	统管办	c=1 d=0.970446 t=32
+xiang 	向	c=1 d=0.995012 t=32
+ying yu 	英语	c=1 d=0.99005 t=32
+yong hu 	用户	c=1 d=0.951229 t=32
+yong yu 	用于	c=2 d=1.79643 t=32
+zai 	在	c=1 d=0.918512 t=32
+zhi jian 	之间	c=1 d=0.932394 t=32
+zhi shi 	只是	c=1 d=0.985112 t=32
+zhu ji 	主机	c=2 d=1.82358 t=32
+zhu yi 	注意	c=1 d=0.946485 t=32

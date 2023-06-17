@@ -1,0 +1,9 @@
+distribution_code_name: Squirrel
+distribution_name: "鼠鬚管"
+distribution_version: 0.16.2
+install_time: "Sat Jun 17 11:53:18 2023"
+installation_id: "PersonalMac"
+# 同步路径,用于在不同主机之间进行同步
+# 注意:用户词典是双向同步,配置只是单向同步
+sync_dir: "/Users/dengzhicheng/.config/RimeSync"
+rime_version: 1.8.5
