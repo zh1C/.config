@@ -139,6 +139,11 @@ if [[ ! -e "$XDG_CONFIG_HOME/tmux/tmux.conf.local" ]]; then
 	echo "\033[32mCreate tmux.conf.local\033[0m"
 fi
 
+# ohmyzsh
+if [[ $ZSH == "" ]]; then
+	export ZSH="$HOME/.config/oh-my-zsh"
+fi
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install ohmyzsh plugins
