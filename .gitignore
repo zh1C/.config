@@ -31,6 +31,7 @@
 !/zsh/.zshrc
 !/zsh/aliasrc
 !/zsh/bin
+!/zsh/env.sh
 
 # do not ignore yabai config
 !/yabai

@@ -8,6 +8,10 @@ chsh -s $(which zsh)
 if [ "$(uname)" == "Darwin" ]; then
 	echo "\033[33mRunning on OSX.\033[0m"
 
+	echo "\033[33mAdding environments.\033[0m"
+	echo '\n#adding environments from env.sh.\nsource "$HOME/.config/zsh/env.sh"' >> "$HOME/.zprofile"
+	source "$HOME/.zprofile"
+
 	echo "\033[33mBrewing all the things.\033[0m"
 	source ./install/brew.sh
 
