@@ -22,6 +22,7 @@ brew install ripgrep
 brew install ranger
 brew install starship
 brew install zoxide
+brew install cantino/mcfly/mcfly
 
 valid_installed() {
 	local util

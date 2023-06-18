@@ -88,3 +88,6 @@ eval "$(starship init zsh)"
 
 # zoxide load
 eval "$(zoxide init zsh)"
+
+# mcfly load
+eval "$(mcfly init zsh)"
