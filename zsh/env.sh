@@ -27,3 +27,6 @@ export PATH=$PATH:$HOME/.config/zsh/bin
 # fix no UTF-8. 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+# zoxide database path
+export _ZO_DATA_DIR="$HOME/.config/zsh/zoxide"

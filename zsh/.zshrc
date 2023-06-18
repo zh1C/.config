@@ -87,5 +87,4 @@ bindkey '^e' edit-command-line
 eval "$(starship init zsh)"
 
 # zoxide load
-export _ZO_DATA_DIR="$HOME/.config/zsh/zoxide"
 eval "$(zoxide init zsh)"
