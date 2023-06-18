@@ -22,7 +22,7 @@ brew install fd
 brew install fzf
 brew install highlight
 brew install jq
-brew install lazygit
+brew install jesseduffield/lazygit/lazygit
 brew install ripgrep
 brew install ranger
 brew install starship
@@ -71,6 +71,11 @@ valid_installed "ranger"
 valid_installed "starship"
 valid_installed "zoxide"
 
+# ranger plugins
+echo "\033[32mInstalling ranger plugins.\033[0m"
+git clone https://github.com/prateekpunetha/ranger_devicons.git "$HOME/.config/ranger/plugins/ranger_devicons"
+git clone git@github.com:jchook/ranger-zoxide.git "$HOME/.config/ranger/plugins/zoxide"
+git clone git@github.com:MuXiu1997/ranger-fzf-filter.git "$HOME/.config/ranger/plugins/ranger_fzf_filter"
 
 # macos util
 brew install koekeishiya/formulae/yabai
