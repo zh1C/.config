@@ -30,6 +30,7 @@
 /zsh/*
 !/zsh/.zshrc
 !/zsh/aliasrc
+!/zsh/shortcutsrc
 !/zsh/bin
 !/zsh/env.sh
 

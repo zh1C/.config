@@ -76,7 +76,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # Load aliases and shortcuts if existent.
-[ -f "$HOME/.config/zsh/shortcutrc" ] && source "$HOME/.config/zsh/shortcutrc"
+[ -f "$HOME/.config/zsh/shortcutsrc" ] && source "$HOME/.config/zsh/shortcutsrc"
 [ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
 
 # Load fzf config if existent.
