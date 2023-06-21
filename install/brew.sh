@@ -18,6 +18,7 @@ brew install fzf
 brew install highlight
 brew install jq
 brew install jesseduffield/lazygit/lazygit
+brew install --HEAD neovim
 brew install ripgrep
 brew install ranger
 brew install starship
@@ -42,10 +43,20 @@ valid_installed "fzf"
 valid_installed "highlight"
 valid_installed "jq"
 valid_installed "lazygit"
+valid_installed "nvim"
 valid_installed "rg"
 valid_installed "ranger"
 valid_installed "starship"
 valid_installed "zoxide"
+
+# neovim
+if [[ ! -d "$HOME/.config/nvim" ]]; then
+	mkdir "$HOME/.config/nvim"
+fi
+
+# clone nvim configurations
+git clone git@github.com:zh1C/neovim-config.git "$HOME/.config/nvim"
+
 
 # ranger plugins
 echo "\033[32mInstalling ranger plugins.\033[0m"
