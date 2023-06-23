@@ -373,7 +373,7 @@ bind-key T run-shell "$HOME/.config/zsh/bin/t"
 #set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
+set -gu prefix2
 unbind C-a
 unbind C-b
 set -g prefix C-s

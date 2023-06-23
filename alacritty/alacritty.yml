@@ -15,8 +15,8 @@ font:
     style: Regular
   size: 16
   
-
+# \x13 = control-s (the default tmux prefix)
 key_bindings:
-  - { key: T, mods: Command, chars: "\x01\x63" }  # create a new tmux window
-  - { key: J, mods: Command, chars: "\x01\x54" }  # open smart session in tmux
-  - { key: W, mods: Command, chars: "\x01\x78" }  # kill the current pane
+  - { key: T, mods: Command, chars: "\x13\x63" }  # create a new tmux window
+  - { key: J, mods: Command, chars: "\x13\x54" }  # open smart session in tmux
+  - { key: W, mods: Command, chars: "\x13\x78" }  # kill the current pane
