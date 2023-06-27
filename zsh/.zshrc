@@ -14,6 +14,10 @@ ZSH_THEME="ys"
 # DISABLE_FZF_AUTO_COMPLETION="false"
 # DISABLE_FZF_KEY_BINDINGS="false"
 
+# Skip aliases
+# Skip only aliases defined in the directories.zsh lib file
+zstyle ':omz:lib:directories' aliases no
+
 # zsh-syntax-highlighting must be the last plugin sourced.
 plugins=(git 
 		# fzf 
