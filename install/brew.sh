@@ -97,6 +97,7 @@ brew install --cask raycast
 brew install --cask visual-studio-code
 brew install --cask spotify
 brew install --cask squirrel
+brew install --cask obsidian
 
 valid_installed "alacritty"
 
