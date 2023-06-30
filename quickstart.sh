@@ -9,6 +9,10 @@ if [ "$(uname)" == "Darwin" ]; then
 	echo "\033[33mRunning on OSX.\033[0m"
 
 	echo "\033[33mAdding environments.\033[0m"
+	if [[ ! -e "$HOME/.zprofile" ]]; then 
+		touch "$HOME/.zprofile"
+		echo "\033[32mCreate .zprofile file.\033[0m"
+	fi
 	echo '\n#adding environments from env.sh.\nsource "$HOME/.config/zsh/env.sh"' >> "$HOME/.zprofile"
 	source "$HOME/.zprofile"
 
