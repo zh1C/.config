@@ -18,7 +18,7 @@ brew install fzf
 brew install highlight
 brew install jq
 brew install jesseduffield/lazygit/lazygit
-brew install --HEAD neovim
+brew install neovim
 brew install ripgrep
 brew install ranger
 brew install starship
@@ -91,7 +91,7 @@ launch_service "skhd"
 # cask
 brew install --cask alacritty
 brew install --cask font-hack-nerd-font
-brew install font-lxgw-wenkai
+brew tap homebrew/cask-fonts && brew install font-lxgw-wenkai
 brew install --cask stats
 brew install --cask raycast
 brew install --cask visual-studio-code
