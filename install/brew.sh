@@ -12,6 +12,7 @@ echo "\033[33mInstalling homebrew packages...\033[0m"
 
 # devlop
 brew install bat
+brew install btop
 brew install exa
 brew install fd
 brew install fzf
@@ -21,7 +22,9 @@ brew install jesseduffield/lazygit/lazygit
 brew install neovim
 brew install ripgrep
 brew install ranger
+brew install git-delta
 brew install starship
+brew install neofetch
 brew install zoxide
 brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
 
@@ -37,6 +40,7 @@ valid_installed() {
 }
 
 valid_installed "bat"
+valid_installed "btop"
 valid_installed "exa"
 valid_installed "fd"
 valid_installed "fzf"
@@ -47,6 +51,7 @@ valid_installed "nvim"
 valid_installed "rg"
 valid_installed "ranger"
 valid_installed "starship"
+valid_installed "neofetch"
 valid_installed "zoxide"
 
 # neovim
