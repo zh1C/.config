@@ -23,7 +23,7 @@ brew install ripgrep
 brew install ranger
 brew install starship
 brew install zoxide
-brew install cantino/mcfly/mcfly
+brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
 
 valid_installed() {
 	local util
@@ -55,14 +55,14 @@ if [[ ! -d "$HOME/.config/nvim" ]]; then
 fi
 
 # clone nvim configurations
-git clone git@github.com:zh1C/neovim-config.git "$HOME/.config/nvim"
+git clone https://github.com/zh1C/neovim-config.git "$HOME/.config/nvim"
 
 
 # ranger plugins
 echo "\033[32mInstalling ranger plugins.\033[0m"
 git clone https://github.com/prateekpunetha/ranger_devicons.git "$HOME/.config/ranger/plugins/ranger_devicons"
-git clone git@github.com:jchook/ranger-zoxide.git "$HOME/.config/ranger/plugins/zoxide"
-git clone git@github.com:MuXiu1997/ranger-fzf-filter.git "$HOME/.config/ranger/plugins/ranger_fzf_filter"
+git clone https://github.com/jchook/ranger-zoxide.git "$HOME/.config/ranger/plugins/zoxide"
+git clone https://github.com/MuXiu1997/ranger-fzf-filter.git "$HOME/.config/ranger/plugins/ranger_fzf_filter"
 
 # macos util
 brew install koekeishiya/formulae/yabai
@@ -90,7 +90,7 @@ launch_service "skhd"
 
 # cask
 brew install --cask alacritty
-brew install --cask font-hack-nerd-font
+brew tap caskroom/fonts && brew install --cask font-hack-nerd-font
 brew tap homebrew/cask-fonts && brew install font-lxgw-wenkai
 brew install --cask stats
 brew install --cask raycast
