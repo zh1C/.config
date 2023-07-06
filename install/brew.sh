@@ -11,6 +11,7 @@ fi
 echo "\033[33mInstalling homebrew packages...\033[0m"
 
 # devlop
+brew install atool
 brew install bat
 brew install btop
 brew install exa
