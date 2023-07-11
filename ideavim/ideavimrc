@@ -8,6 +8,8 @@ set timeoutlen 100
 
 " insert mode keymap
 inoremap jk <ESC>
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
 
 " visual mode keymap
 vnoremap jk <ESC>
