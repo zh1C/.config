@@ -2,9 +2,9 @@
 " 显示相对行号
 set nu
 set relativenumber
-set scrolloff 4
-set sidescrolloff 4
-set timeoutlen 100
+set scrolloff=4
+set sidescrolloff=4
+set timeoutlen=100
 
 " insert mode keymap
 inoremap jk <ESC>
