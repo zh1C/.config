@@ -1,3 +1,4 @@
+" --------------------------- Basic Config -------------------------------
 " Basic configurations
 " 显示相对行号
 set nu
@@ -6,12 +7,27 @@ set scrolloff=4
 set sidescrolloff=4
 set timeoutlen=100
 
+let mapleader=" "
+
+" 修改<ESC>退出键映射
+noremap jk <ESC>
+
 " insert mode keymap
 inoremap jk <ESC>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 
 " visual mode keymap
-vnoremap jk <ESC>
 
+" Command mode keymap
+cnoremap jk <ESC>
 
+" ----------------------------- Plugin ----------------------------------
+" Plugin
+Plug 'terryma/vim-multiple-cursors'
+Plug 'easymotion/vim-easymotion'
+
+" Plugin config
+set easymotion
+map <leader><leader>J <Plug>(easymotion-s)
+map <leader><leader>j <Plug>(easymotion-f)

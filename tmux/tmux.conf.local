@@ -365,7 +365,7 @@ bind-key T run-shell "$HOME/.config/zsh/bin/t"
 #set -g history-limit 10000
 
 # start with mouse mode enabled
-# set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
