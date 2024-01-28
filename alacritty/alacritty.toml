@@ -1,0 +1,33 @@
+live_config_reload = true
+
+[font]
+size = 16
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "\u0013c"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0013T"
+key = "J"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0013x"
+key = "W"
+mods = "Command"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+dynamic_title = true
+opacity = 0.85
+
+[window.padding]
+x = 18
+y = 16

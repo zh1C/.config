@@ -52,7 +52,7 @@
 # do not igonre alacritty config
 !/alacritty
 /alacritty/*
-!/alacritty/alacritty.yml
+!/alacritty/alacritty.toml
 
 !/btop
 /btop/*
