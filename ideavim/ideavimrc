@@ -1,16 +1,21 @@
 " --------------------------- Basic Config -------------------------------
+" leader keymap
+let mapleader=" "
+
 " Basic configurations
 " 显示相对行号
 set nu
 set relativenumber
 set scrolloff=4
+set notimeout
 set sidescrolloff=4
-set timeoutlen=100
-
-let mapleader=" "
+set timeoutlen=1000
+set hlsearch
 
 " 修改<ESC>退出键映射
 noremap jk <ESC>
+
+noremap<silent> <C-l> :<C-u>nohlsearch<CR><C-l>`
 
 " insert mode keymap
 inoremap jk <ESC>
@@ -22,12 +27,24 @@ inoremap <C-b> <Left>
 " Command mode keymap
 cnoremap jk <ESC>
 
+" IDE action keymap
+map <leader>fs <Action>(SaveAll)
+
+map <leader>ss <Action>(FindInPath)
+map <leader>se <Action>(SearchEverywhere)
+
 " ----------------------------- Plugin ----------------------------------
 " Plugin
-Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
+" highlight yank plugin
+Plug 'machakann/vim-highlightedyank'
+" comment plugin
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
 
 " Plugin config
-set easymotion
-map <leader><leader>J <Plug>(easymotion-s)
-map <leader><leader>j <Plug>(easymotion-f)
+map <leader>j <Plug>(easymotion-fl)
+
+map <leader>fo :NERDTreeToggle<CR>
+map <leader>ft :NERDTreeFocus<CR>
