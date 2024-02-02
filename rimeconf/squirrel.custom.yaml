@@ -14,6 +14,9 @@ patch:
     com.jetbrains.intellij:
       ascii_mode: true
       vim_mode: true
+    com.jetbrains.goland:
+      ascii_mode: true
+      vim_mode: true
 
   style:
     # 选择皮肤，亮色与暗色主题
