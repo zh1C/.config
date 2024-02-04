@@ -7,9 +7,8 @@ let mapleader=" "
 set nu
 set relativenumber
 set scrolloff=4
-set notimeout
 set sidescrolloff=4
-set timeoutlen=1000
+set timeoutlen=750
 set hlsearch
 
 " 修改<ESC>退出键映射
@@ -27,11 +26,14 @@ inoremap <C-b> <Left>
 " Command mode keymap
 cnoremap jk <ESC>
 
+" ----------------------- Jetbrains keymap -----------------------------
 " IDE action keymap
 map <leader>fs <Action>(SaveAll)
 
 map <leader>ss <Action>(FindInPath)
 map <leader>se <Action>(SearchEverywhere)
+
+map <leader>to <Action>(ActivateTerminalToolWindow)
 
 " ----------------------------- Plugin ----------------------------------
 " Plugin
@@ -44,7 +46,15 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 
 " Plugin config
-map <leader>j <Plug>(easymotion-fl)
+" easymotion keymap
+map <leader>jj <Plug>(easymotion-j)
+map <leader>jk <Plug>(easymotion-k)
+map <leader>jf <Plug>(easymotion-fl)
+map <leader>jF <Plug>(easymotion-Fl)
+map <leader>jw <Plug>(easymotion-w)
+map <leader>jb <Plug>(easymotion-b)
+map <leader>js <Plug>(easymotion-f)
+map <leader>jS <Plug>(easymotion-F)
 
 map <leader>fo :NERDTreeToggle<CR>
 map <leader>ft :NERDTreeFocus<CR>
