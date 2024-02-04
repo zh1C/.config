@@ -28,12 +28,40 @@ cnoremap jk <ESC>
 
 " ----------------------- Jetbrains keymap -----------------------------
 " IDE action keymap
-map <leader>fs <Action>(SaveAll)
+" editor
+map <C-j> <Action>(EditorSelectWord)
+map <C-k> <Action>(EditorUnSelectWord)
 
+" file
+map <leader>fs <Action>(SaveAll)
+map <leader>ff <Action>(RecentFiles) 
+
+" buffer
+map <leader>bn <Action>(NextTab)
+map <leader>bp <Action>(PreviousTab)
+
+" search
 map <leader>ss <Action>(FindInPath)
 map <leader>se <Action>(SearchEverywhere)
 
+" show
+map <leader>sh <Action>(ShowHoverInfo)
+
+" terminal 
 map <leader>to <Action>(ActivateTerminalToolWindow)
+
+" project
+map <leader>pp <Action>(ManageRecentProjects)
+
+" debug
+map <leader>ds <Action>(RedesignedRunConfigurationSelector)
+map <leader>dr <Action>(Run)
+map <leader>dr <Action>(Rerun)
+map <leader>dd <Action>(Debug)
+map <leader>do <Action>(StepOver)
+map <leader>di <Action>(StepInto)
+map <leader>dc <Action>(Resume)
+map <leader>db <Action>(ToggleLineBreakpoint)
 
 " ----------------------------- Plugin ----------------------------------
 " Plugin
