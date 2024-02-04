@@ -8,11 +8,12 @@ set nu
 set relativenumber
 set scrolloff=4
 set sidescrolloff=4
-set timeoutlen=750
+set timeoutlen=700
 set hlsearch
-
-" 修改<ESC>退出键映射
-noremap jk <ESC>
+" Support vim J
+set ideajoin
+set showmode
+set showcmd
 
 noremap<silent> <C-l> :<C-u>nohlsearch<CR><C-l>`
 
@@ -22,9 +23,16 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 
 " visual mode keymap
+vnoremap jk <ESC>
 
 " Command mode keymap
 cnoremap jk <ESC>
+
+" Operation mode keymap
+onoremap jk <ESC>
+
+" Select mode
+snoremap jk <ESC> 
 
 " ----------------------- Jetbrains keymap -----------------------------
 " IDE action keymap
@@ -39,6 +47,15 @@ map <leader>ff <Action>(RecentFiles)
 " buffer
 map <leader>bn <Action>(NextTab)
 map <leader>bp <Action>(PreviousTab)
+
+" model
+" refactor rename
+map <leader>mr <Action>(RenameElement)
+map <leader>mf <Action>(ReformatCode)
+
+" window
+map <leader>z <Action>(ToggleZenMode)
+map <leader>wh <Action>(HideActiveWindow)
 
 " search
 map <leader>ss <Action>(FindInPath)
