@@ -43,6 +43,7 @@ map <C-k> <Action>(EditorUnSelectWord)
 " file
 map <leader>fs <Action>(SaveAll)
 map <leader>ff <Action>(RecentFiles) 
+map <leader>fi <Action>(SelectInProjectView)
 
 " buffer
 map <leader>bn <Action>(NextTab)
@@ -58,8 +59,11 @@ map <leader>z <Action>(ToggleZenMode)
 map <leader>wh <Action>(HideActiveWindow)
 
 " search
-map <leader>ss <Action>(FindInPath)
+map <leader>sp <Action>(FindInPath)
 map <leader>se <Action>(SearchEverywhere)
+map <leader>ss <Action>(GotoSymbol)
+map <leader>sc <Action>(GotoClass)
+map <leader>sf <Action>(GotoFile)
 
 " show
 map <leader>sh <Action>(ShowHoverInfo)
