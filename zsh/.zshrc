@@ -97,4 +97,4 @@ eval "$(zoxide init zsh)"
 eval "$(mcfly init zsh)"
 
 # Start neofetch when open the terminal.
-neofetch
+# neofetch
