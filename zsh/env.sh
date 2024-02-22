@@ -9,6 +9,8 @@ export EDITOR="nvim"
 export ZDOTDIR="$HOME/.config/zsh"
 export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
 
+export XTERM=xterm-256color
+
 # ranger avoid loading both the default and my own rc.conf
 export RANGER_LOAD_DEFAULT_RC="false"
 
