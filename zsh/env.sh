@@ -42,3 +42,9 @@ export MCFLY_FUZZY=2
 export MCFLY_RESULTS=10
 export MCFLY_PROMPT="❯"
 export MCFLY_HISTORY_LIMIT=10000
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+
+# Created by `pipx` on 2024-02-28 11:50:57
+export PATH="$PATH:/Users/dengzhicheng/.local/bin"

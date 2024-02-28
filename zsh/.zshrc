@@ -98,3 +98,9 @@ eval "$(mcfly init zsh)"
 
 # Start neofetch when open the terminal.
 # neofetch
+
+# pyenv-virtualenvs
+eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init --path)" 
+eval "$(pyenv init -)"
+
