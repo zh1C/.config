@@ -43,6 +43,9 @@ export MCFLY_RESULTS=10
 export MCFLY_PROMPT="❯"
 export MCFLY_HISTORY_LIMIT=10000
 
+# pipx Home
+export PIPX_HOME="$HOME/.local/pipx"
+
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 
