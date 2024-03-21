@@ -26,6 +26,9 @@ export ZSH="$HOME/.config/oh-my-zsh"
 # bin/t
 export PATH=$PATH:$HOME/.config/zsh/bin
 
+# custom bin
+export PATH=$PATH:$HOME/.config/tools
+
 # fix no UTF-8. btop
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8

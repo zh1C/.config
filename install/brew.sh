@@ -28,6 +28,7 @@ brew install starship
 brew install neofetch
 brew install zoxide
 brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
+brew telnet
 
 valid_installed() {
 	local util
@@ -54,6 +55,7 @@ valid_installed "ranger"
 valid_installed "starship"
 valid_installed "neofetch"
 valid_installed "zoxide"
+valid_installed "telnet"
 
 # neovim
 if [[ ! -d "$HOME/.config/nvim" ]]; then
