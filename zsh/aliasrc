@@ -23,7 +23,7 @@ alias tree='exa -alh --tree --icons --level=1 --git'
 alias as='as.sh'
 
 # work alias
-alias jumper='ssh dengzhicheng03@jumper.sankuai.com'
+alias jumper='ssh -i ~/.ssh/id_rsa_jumper dengzhicheng03@jumper.sankuai.com'
 
 alias ss='source ~/.config/zsh/.zshrc'
 alias sz='source ~/.zprofile'
