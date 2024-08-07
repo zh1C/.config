@@ -15,9 +15,9 @@ alias ra='ranger'
 
 # use exa replace ls
 # brew install exa
-alias l='exa -alh'
-alias li='exa -alh --icons --git'
-alias tree='exa -alh --tree --icons --level=1 --git'
+alias l='eza -alh'
+alias li='eza -alh --icons --git'
+alias tree='eza -alh --tree --icons --level=1 --git'
 
 # arthas
 alias as='as.sh'

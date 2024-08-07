@@ -15,7 +15,10 @@ set ideajoin
 set showmode
 set showcmd
 
+map<silent> gi <Action>(GotoImplementation)
 noremap<silent> <C-l> :<C-u>nohlsearch<CR><C-l>`
+noremap<silent> H ^
+noremap<silent> L g_
 
 " insert mode keymap
 inoremap jk <ESC>
@@ -24,6 +27,8 @@ inoremap <C-b> <Left>
 
 " visual mode keymap
 vnoremap jk <ESC>
+vnoremap<silent> H ^
+vnoremap<silent> L g_
 
 " Command mode keymap
 cnoremap jk <ESC>
@@ -43,7 +48,7 @@ map <C-k> <Action>(EditorUnSelectWord)
 " file
 map <leader>fs <Action>(SaveAll)
 map <leader>ff <Action>(RecentFiles) 
-map <leader>fi <Action>(SelectInProjectView)
+map <leader>fT <Action>(SelectInProjectView)
 
 " buffer
 map <leader>bn <Action>(NextTab)
@@ -66,7 +71,7 @@ map <leader>sc <Action>(GotoClass)
 map <leader>sf <Action>(GotoFile)
 
 " show
-map <leader>sh <Action>(ShowHoverInfo)
+map<silent> gh <Action>(ShowHoverInfo)
 
 " terminal 
 map <leader>to <Action>(ActivateTerminalToolWindow)
