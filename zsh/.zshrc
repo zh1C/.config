@@ -21,6 +21,7 @@ zstyle ':omz:lib:directories' aliases no
 # zsh-syntax-highlighting must be the last plugin sourced.
 plugins=(git 
 		# fzf 
+		# vi-mode
 		fzf-tab
 		zsh-autosuggestions 
 		zsh-syntax-highlighting
