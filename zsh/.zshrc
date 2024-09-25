@@ -88,6 +88,10 @@ bindkey '^e' edit-command-line
 # [ -f "$HOME/.config/zsh/fzfrc" ] && source "$HOME/.config/zsh/fzfrc"
 # [ -f "$HOME/.config/zsh/.fzf.sh" ] && source "$HOME/.config/zsh/.fzf.sh"
 
+# nvm loads
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # starship load
 eval "$(starship init zsh)"
 
@@ -105,6 +109,3 @@ eval "$(pyenv virtualenv-init -)"
 eval "$(pyenv init --path)" 
 eval "$(pyenv init -)"
 
-# nvm loads
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
