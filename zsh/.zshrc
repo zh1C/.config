@@ -109,3 +109,6 @@ eval "$(pyenv virtualenv-init -)"
 eval "$(pyenv init --path)" 
 eval "$(pyenv init -)"
 
+# go env
+eval "$(goenv init -)"
+
