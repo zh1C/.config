@@ -26,6 +26,9 @@ export ZSH="$HOME/.config/oh-my-zsh"
 # bin/t
 export PATH=$PATH:$HOME/.config/zsh/bin
 
+# go/bin
+PATH=$PATH:$HOME/go/bin
+
 # custom bin
 export PATH=$PATH:$HOME/.config/tools
 

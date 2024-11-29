@@ -42,8 +42,8 @@ snoremap jk <ESC>
 " ----------------------- Jetbrains keymap -----------------------------
 " IDE action keymap
 " editor
-map <C-j> <Action>(EditorSelectWord)
-map <C-k> <Action>(EditorUnSelectWord)
+map <C-h> <Action>(EditorSelectWord)
+map <C-l> <Action>(EditorUnSelectWord)
 
 " file
 map <leader>fs <Action>(SaveAll)
