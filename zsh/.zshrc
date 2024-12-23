@@ -112,3 +112,4 @@ eval "$(pyenv init -)"
 # go env
 # eval "$(goenv init -)"
 
+eval $(thefuck --alias)
