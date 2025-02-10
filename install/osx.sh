@@ -13,6 +13,10 @@ defaults write com.apple.dock "show-recents" -bool "false"
 echo "Close rearrange automatically"
 defaults write com.apple.dock "mru-spaces" -bool "false"
 
+defaults write com.apple.dock workspaces-edge-delay -float 0.1
+
+defaults write com.apple.dock expose-animation-duration -float 0.1
+
 killall Dock
 
 # Finder
