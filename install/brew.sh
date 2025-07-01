@@ -27,6 +27,8 @@ brew install git-delta
 brew install starship
 brew install neofetch
 brew install zoxide
+brew install jenv
+brew install pyenv
 brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
 brew telnet
 
