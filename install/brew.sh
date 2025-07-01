@@ -14,7 +14,7 @@ echo "\033[33mInstalling homebrew packages...\033[0m"
 brew install atool
 brew install bat
 brew install btop
-brew install exa
+brew install eza
 brew install fd
 brew install fzf
 brew install highlight
@@ -43,7 +43,7 @@ valid_installed() {
 
 valid_installed "bat"
 valid_installed "btop"
-valid_installed "exa"
+valid_installed "eza"
 valid_installed "fd"
 valid_installed "fzf"
 valid_installed "highlight"
