@@ -30,8 +30,8 @@ plugins=(git
 source $ZSH/oh-my-zsh.sh
 
 # History in cache directory.
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=30000
+SAVEHIST=30000
 HISTFILE=~/.cache/zsh/history
 
 # Basic auto/tab complete.
