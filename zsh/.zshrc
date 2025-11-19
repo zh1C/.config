@@ -22,6 +22,7 @@ zstyle ':omz:lib:directories' aliases no
 plugins=(git 
 		# fzf 
 		# vi-mode
+		macos
 		fzf-tab
 		zsh-autosuggestions 
 		zsh-syntax-highlighting
