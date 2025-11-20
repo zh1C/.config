@@ -11,6 +11,7 @@
 !/tmux
 /tmux/*
 !/tmux/tmux.conf.local
+!/tmux/tmux-nerd-font-window-name.yml
 
 # do not ignore ranger config
 !/ranger
