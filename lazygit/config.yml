@@ -9,8 +9,8 @@ gui:
     selectedLineBgColor:
       - default
 git:
-  paging:
-    colorArg: always
-    pager: delta  --dark --paging=never --24-bit-color=never --syntax-theme="OneHalfDark"
+  pagers:
+    - colorArg: always
+      pager: delta  --dark --paging=never --24-bit-color=never --syntax-theme="OneHalfDark"
 os:
   editPreset: 'nvim'
