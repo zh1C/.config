@@ -3,7 +3,6 @@
 if [ "$1" = "-h" ] || [ "$1" == "--help" ]; then # help argument
 	printf "\n"
 	printf "\033[1m  t - the smart tmux session manager\033[0m\n"
-	printf "\033[37m  https://github.com/joshmedeski/t-smart-tmux-session-manager\n"
 	printf "\n"
 	printf "\033[32m  Run interactive mode\n"
 	printf "\033[34m      t\n"
@@ -20,6 +19,10 @@ if [ "$1" = "-h" ] || [ "$1" == "--help" ]; then # help argument
 	printf "\033[34m        ctrl-x list only zoxide results\n"
 	printf "\033[34m        ctrl-d list directories\n"
 	printf "\n"
+	printf "\033[32m  Kill unattached sessions\n"
+	printf "\033[34m      t -k\n"
+	printf "\033[34m      t --kill\n"
+	printf "\n"
 	printf "\033[32m  Show help\n"
 	printf "\033[34m      t -h\n"
 	printf "\033[34m      t --help\n"
@@ -29,6 +32,46 @@ fi
 
 tmux ls &>/dev/null
 TMUX_STATUS=$?
+
+
+if [ "$1" = "-k" ] || [ "$1" = "--kill" ]; then
+	if [ $TMUX_STATUS -ne 0 ]; then
+		printf "\033[31mError: tmux is not running\033[0m\n"
+		exit 1
+	fi
+
+	# 获取所有未 attached 的 session
+	UNATTACHED_SESSIONS=$(tmux list-sessions -F '#{?session_attached,,#{session_name}}' | grep -v '^$')
+
+	if [ -z "$UNATTACHED_SESSIONS" ]; then
+		printf "\033[32mNo unattached sessions found.\033[0m\n"
+		exit 0
+	fi
+
+	SESSION_COUNT=$(echo "$UNATTACHED_SESSIONS" | wc -l | tr -d ' ')
+	printf "\033[33mFound $SESSION_COUNT unattached session(s)\033[0m\n"
+
+	# 交互式确认（可选：如果不想确认，可以删除这部分）
+	# if [ -t 0 ]; then  # 只在终端交互模式下询问
+		# printf "\033[33mKill these sessions? [y/N]: \033[0m"
+		# read -r response
+		# if [ "$response" != "y" ] && [ "$response" != "Y" ]; then
+			# printf "Cancelled.\n"
+			# exit 0
+		# fi
+	# fi
+
+	# 关闭未 attached 的 session
+	echo "$UNATTACHED_SESSIONS" | while read -r session; do
+		if tmux kill-session -t "$session" 2>/dev/null; then
+			printf "\033[32mKilled session: %s\033[0m\n" "$session"
+		else
+			printf "\033[31mFailed to kill session: %s\033[0m\n" "$session"
+		fi
+	done
+
+	exit 0
+fi
 
 get_fzf_prompt() {
 	local fzf_prompt
