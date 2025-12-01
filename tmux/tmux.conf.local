@@ -359,7 +359,7 @@ tmux_conf_copy_to_os_clipboard=false
 # bin/t config
 bind-key x kill-pane  # skip "kill-pane 1? (y/n)" prompt
 set -g detach-on-destroy off  # don't exit from tmux when closing a session# skip "kill-pane 1? (y/n)" prompt
-bind-key "T" run-shell "sesh connect \"$(
+bind-key -N "List sessions" "T" run-shell "sesh connect \"$(
   sesh list --icons | fzf-tmux -p 80%,70% \
     --no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
     --header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
@@ -373,6 +373,9 @@ bind-key "T" run-shell "sesh connect \"$(
     --preview-window 'right:55%' \
     --preview 'sesh preview {}'
 )\""
+
+# Switch the attached client back to the last session, use sesh.
+bind -N "last-session (via sesh) " L run-shell "sesh last"
 
 # increase history size
 #set -g history-limit 10000
