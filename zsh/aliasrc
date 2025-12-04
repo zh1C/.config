@@ -10,6 +10,9 @@ alias vi='nvim'
 # lazygit alias lg
 alias lg='lazygit'
 
+# use bat replace cat
+alias cat='bat'
+
 # ranger alias ra
 alias ra='ranger'
 
