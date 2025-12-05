@@ -81,6 +81,16 @@ preexec() { echo -ne '\e[5 q'; }
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+# yazi file manager
+# use y replase yazi to start
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/zsh/shortcutsrc" ] && source "$HOME/.config/zsh/shortcutsrc"
 [ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
