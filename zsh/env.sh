@@ -61,3 +61,5 @@ export PATH="$PATH:/Users/dengzhicheng/.local/bin"
 export NVM_DIR="$HOME/.config/nvm"
 
 export PATH="$PATH:$HOME/.jenv/bin"
+
+export PATH="$HOME/.local/bin:$PATH"
