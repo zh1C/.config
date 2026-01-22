@@ -55,9 +55,6 @@ export PIPX_HOME="$HOME/.local/pipx"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 
-# Created by `pipx` on 2024-02-28 11:50:57
-export PATH="$PATH:/Users/dengzhicheng/.local/bin"
-
 export NVM_DIR="$HOME/.config/nvm"
 
 export PATH="$PATH:$HOME/.jenv/bin"
