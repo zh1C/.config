@@ -14,7 +14,8 @@ alias lg='lazygit'
 alias cat='bat'
 
 # ranger alias ra
-alias ra='ranger'
+# yazi alias ra
+alias ra='y'
 
 # use exa replace ls
 # brew install exa
