@@ -2,186 +2,72 @@
 
 ![screenshot](./ScreenShot.png)
 
-这是我的配置文件仓库，包含的软件有Alacritty、zsh、tmux、ranger、lazygit、fzf、yabai等相关配置。
+macOS dotfiles 仓库，通过 `quickstart.sh` 一键安装。
 
 ## 软件
 
-- 桌面管理软件: [yabai](https://github.com/koekeishiya/yabai)
-- MacOS文件启动器: [Raycast](https://www.raycast.com)
-- MacOS包管理软件: [Homebrew](https://brew.sh)
-- 输入法: [Rime](https://rime.im/) + [雾凇](https://github.com/iDvel/rime-ice)
+- 桌面管理: [yabai](https://github.com/koekeishiya/yabai)
 - 快捷键守护进程: [skhd](https://github.com/koekeishiya/skhd)
-- Shell提示符美化: [starship](https://github.com/starship/starship)
 - 终端: [Alacritty](https://github.com/alacritty/alacritty)
-- Git: [lazygit](https://github.com/jesseduffield/lazygit)
-- zsh配置框架: [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
-- 终端多路复用: [tmux](https://github.com/tmux/tmux)
-- 终端文件管理器: [ranger](https://github.com/ranger/ranger)
-- 音乐插件: [Sleeve](https://replay.software/sleeve)
+- 终端多路复用: [tmux](https://github.com/tmux/tmux) + [sesh](https://github.com/joshmedeski/sesh)
+- Shell: zsh + [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+- Shell 提示符: [starship](https://github.com/starship/starship)
+- 文件管理器: [yazi](https://github.com/sxyazi/yazi)
+- Git: [lazygit](https://github.com/jesseduffield/lazygit) + [git-delta](https://github.com/dandavison/delta)
+- 编辑器: [Neovim](https://github.com/neovim/neovim)
+- 输入法: [Rime](https://rime.im/) + [雾凇拼音](https://github.com/iDvel/rime-ice)
+- 启动器: [Raycast](https://www.raycast.com)
+- 包管理: [Homebrew](https://brew.sh)
+- 历史搜索: [mcfly](https://github.com/cantino/mcfly)
+- 目录跳转: [zoxide](https://github.com/ajeetdsouza/zoxide)
+- 系统监控: [btop](https://github.com/aristocratos/btop)
 
 ## 快速安装
 
-可以使用`quickstart.sh`脚本快速安装所需的软件并配置相关环境变量.
-
 ```shell
 git clone https://github.com/zh1C/.config.git "$HOME/.config"
-
 cd $HOME/.config
-
-sh ./quickstart.sh
+zsh ./quickstart.sh
 ```
 
-## 单独安装
+安装完成后需要手动执行：
 
-### tmux
+1. 更新 yabai sudoers hash: `upyabai`
+2. 更新 Rime `installation.yml` 中的 `sync_dir`
+3. 如果 Rime 无法使用，注销重新登录
 
-相关安装配置如下:
+## 目录结构
+
+```
+.config/
+├── alacritty/      # 终端配置
+├── btop/           # 系统监控配置
+├── ideavim/        # JetBrains Vim 插件配置
+├── install/        # 安装脚本
+├── lazygit/        # lazygit 配置
+├── rimeconf/       # Rime 输入法配置
+├── sesh/           # tmux session manager 配置
+├── skhd/           # 快捷键配置
+├── starship/       # Shell 提示符配置
+├── tmux/           # tmux 配置
+├── tools/          # 自定义工具脚本
+├── yabai/          # 窗口管理配置
+├── yazi/           # 文件管理器配置
+└── zsh/            # Shell 配置
+```
+
+## yabai + skhd
+
+关闭 SIP 后安装，快捷键见 `skhd/skhdrc`。
 
 ```shell
-# install tmux
-brew install tmux
-
-# pretty tmux
-git clone https://github.com/gpakosz/.tmux.git "$HOME/.config/tmux/.tmux"
-ln -s "/path/to/oh-my-tmux/.tmux.conf" "$HOME/tmux/tmux.conf"
-```
-
-### ohmyzsh
-
-相关安装过程如下:
-
-```Shell
-# custom directory
-# add $ZSH to .zprofile
-export $ZSH="$HOME/.config/oh-my-zsh"
-
-# install ohmyzsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# install plugins
-```
-
-### ranger
-
-相关安装如下:
-
-```shell
-# install ranger
-brew install ranger
-
-# preview windows syntax highlighting
-brew install highlight
-```
-
-### yabai
-
-[yabai](https://github.com/koekeishiya/yabai)是MacOS的平铺桌面管理软件，相比于`BetterTouch Tool`
-等付费的桌面管理软件，更加符合工作流。
-
-#### 关闭MacOS的SIP
-
-安装yabai之前，需要关闭Mac的[SIP](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection)
-(System Integrity Protection)。
-
-#### 安装yabai
-
-通过`Homebrew`进行安装，安装代码如下：
-
-```shell
-brew install koekeishiya/formulae/yabai
-```
-
-#### yabai的简单使用
-
-相关的简单使用
-
-```shell
-# 启动yabai服务
+# 服务管理
 yabai --start-service
-
-# 关闭yabai服务
-yabai --stop-service
-
-# 重启yabai服务
 yabai --restart-service
-```
-
-### skhd
-
-[skhd](https://github.com/koekeishiya/skhd)是MacOS的快捷键守护进程，通常配合
-yabai使用。
-
-#### 安装skhd
-
-通过`Homebrew`进行安装，安装代码如下：
-
-```shell
-brew install koekeishiya/formulae/skhd
-```
-
-#### skhd的简单使用
-
-相关的简单使用
-
-```shell
-# 启动skhd服务
 skhd --start-service
-
-# 关闭skhd服务
-skhd --stop-service
-
-# 重启skhd服务
 skhd --restart-service
 ```
 
-### starship
+## tmux
 
-[starship](https://github.com/starship/starship)是一个可以定制化的Shell提示符主题。
-
-#### 安装starship
-
-通过`Homebrew`进行安装，安装代码如下：
-
-```shell
-brew install starship
-```
-
-#### 修改starship配置文件路径
-
-将以下环境变量添加到Shell配置文件中，zsh建议添加到`~/.zprofile`中。
-
-```shell
-export STARSHIP_CONFIG=~/example/non/default/path/starship.toml
-```
-
-### Alacritty
-
-通过`Homebrew`进行安装,安装代码如下:
-
-```shell
-brew install --cask alacritty
-```
-
-### lazygit
-
-通过`Homebrew`进行安装,安装代码如下:
-
-```shell
-brew install lazygit
-
-# 修改配置文件路径,添加到~/.zprofile中
-export XDG_CONFIG_HOME="$HOME/.config"
-```
-
-### Smart switch tmux session
-
-这是一个Shell脚本命令,可以快速的切换Tmux session,通过`t -help`查看更多细节.
-需要依赖[zoxide](https://github.com/ajeetdsouza/zoxide), fzf, tmux和fd.
-
-```Shell
-# install zoxide
-brew install zoxide
-
-# install fd
-brew install fd
-```
+prefix 键为 `Ctrl-S`，session 切换使用 `prefix + T`（sesh）。

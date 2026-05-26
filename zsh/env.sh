@@ -2,23 +2,21 @@
 
 # Environments should be add ~/.zprofile
 
+# Deduplicate PATH entries
+typeset -U path
+
 # Default programs
 export EDITOR="nvim"
 
 # ~/ Clean-up
 export ZDOTDIR="$HOME/.config/zsh"
-export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
-
-export XTERM=xterm-256color
+export ZSH_COMPDUMP="$HOME/.config/oh-my-zsh/cache/.zcompdump-$HOST"
 
 # lazygit change config directory
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # starship config directory
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-
-# oh-my-zsh 
-export ZSH="$HOME/.config/oh-my-zsh"
 
 # bin/t
 export PATH=$PATH:$HOME/.config/zsh/bin
