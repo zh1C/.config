@@ -11,9 +11,6 @@ export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
 
 export XTERM=xterm-256color
 
-# ranger avoid loading both the default and my own rc.conf
-export RANGER_LOAD_DEFAULT_RC="false"
-
 # lazygit change config directory
 export XDG_CONFIG_HOME="$HOME/.config"
 

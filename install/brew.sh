@@ -25,7 +25,7 @@ brew install jq
 brew install jesseduffield/lazygit/lazygit
 brew install neovim
 brew install ripgrep
-brew install ranger
+brew install yazi ffmpegthumbnailer poppler
 brew install git-delta
 brew install starship
 brew install neofetch
@@ -56,7 +56,7 @@ valid_installed "jq"
 valid_installed "lazygit"
 valid_installed "nvim"
 valid_installed "rg"
-valid_installed "ranger"
+valid_installed "yazi"
 valid_installed "starship"
 valid_installed "neofetch"
 valid_installed "zoxide"
@@ -74,11 +74,9 @@ else
 fi
 
 
-# ranger plugins
-echo "\033[32mInstalling ranger plugins.\033[0m"
-git clone https://github.com/prateekpunetha/ranger_devicons.git "$HOME/.config/ranger/plugins/ranger_devicons"
-git clone https://github.com/jchook/ranger-zoxide.git "$HOME/.config/ranger/plugins/zoxide"
-git clone https://github.com/MuXiu1997/ranger-fzf-filter.git "$HOME/.config/ranger/plugins/ranger_fzf_filter"
+# yazi plugins
+echo "\033[32mInstalling yazi plugins.\033[0m"
+ya pack -i
 
 # macos util
 brew install koekeishiya/formulae/yabai
