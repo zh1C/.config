@@ -167,10 +167,6 @@ if [[ ! -e "$HOME/.config/tmux/tmux.conf" ]]; then
 	echo "\033[32mCreate tmux.conf\033[0m"
 fi
 
-if [[ ! -e "$HOME/.config/tmux/tmux.conf.local" ]]; then
-	cp "$HOME/.config/tmux/.tmux/.tmux.conf.local" "$HOME/.config/tmux/tmux.conf.local"
-	echo "\033[32mCreate tmux.conf.local\033[0m"
-fi
 
 # ohmyzsh
 if [[ $ZSH == "" ]]; then

@@ -31,6 +31,7 @@ plugins=(git
 source $ZSH/oh-my-zsh.sh
 
 # History in cache directory.
+[[ -d ~/.cache/zsh ]] || mkdir -p ~/.cache/zsh
 HISTSIZE=30000
 SAVEHIST=30000
 HISTFILE=~/.cache/zsh/history

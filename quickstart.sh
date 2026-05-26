@@ -20,6 +20,8 @@ if [ "$(uname)" == "Darwin" ]; then
 	fi
 	source "$HOME/.zprofile"
 
+	mkdir -p "$HOME/.cache/zsh"
+
 	echo "\033[33mBrewing all the things.\033[0m"
 	source "$SCRIPT_DIR/install/brew.sh"
 
