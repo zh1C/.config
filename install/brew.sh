@@ -46,6 +46,8 @@ brew install neofetch
 brew install zoxide
 brew install jenv
 brew install pyenv
+brew install pyenv-virtualenv
+brew install thefuck
 brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
 brew install telnet
 
@@ -173,7 +175,7 @@ if [[ $ZSH == "" ]]; then
 	export ZSH="$HOME/.config/oh-my-zsh"
 fi
 
-RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # install ohmyzsh plugins
 export ZSH_CUSTOM="$HOME/.config/oh-my-zsh/custom"

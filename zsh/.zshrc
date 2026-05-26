@@ -119,10 +119,12 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # Start neofetch when open the terminal.
 # neofetch
 
-# pyenv-virtualenvs
-eval "$(pyenv virtualenv-init -)"
-eval "$(pyenv init --path)" 
-eval "$(pyenv init -)"
+# pyenv
+if command -v pyenv &>/dev/null; then
+    eval "$(pyenv init --path)"
+    eval "$(pyenv init -)"
+    pyenv commands | grep -q virtualenv-init && eval "$(pyenv virtualenv-init -)"
+fi
 
 # go env
 # eval "$(goenv init -)"
@@ -130,7 +132,7 @@ eval "$(pyenv init -)"
 # jenv
 eval "$(jenv init -)"
 
-eval $(thefuck --alias)
+command -v thefuck &>/dev/null && eval $(thefuck --alias)
 
 # pnpm
 export PNPM_HOME="/Users/narcissus/Library/pnpm"
