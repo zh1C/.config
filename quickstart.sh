@@ -2,31 +2,21 @@
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-echo "\033[33mInstalling dotfiles.\033[0m"
+echo "\033[33mInstalling dotfiles...\033[0m"
 
-echo "\033[32mConfiguring zsh as default shell.\033[0m"
-chsh -s $(which zsh)
-
-if [ "$(uname)" == "Darwin" ]; then
-	echo "\033[33mRunning on OSX.\033[0m"
-
-	echo "\033[33mAdding environments.\033[0m"
-	if [[ ! -e "$HOME/.zprofile" ]]; then
-		touch "$HOME/.zprofile"
-		echo "\033[32mCreate .zprofile file.\033[0m"
-	fi
-	if ! grep -q 'source "$HOME/.config/zsh/env.sh"' "$HOME/.zprofile" 2>/dev/null; then
-		echo '\n#adding environments from env.sh.\nsource "$HOME/.config/zsh/env.sh"' >> "$HOME/.zprofile"
-	fi
-	source "$HOME/.zprofile"
-
-	mkdir -p "$HOME/.cache/zsh"
-
-	echo "\033[33mBrewing all the things.\033[0m"
-	source "$SCRIPT_DIR/install/brew.sh"
-
-	echo "\033[33mUpdating OSX settings.\033[0m"
-	source "$SCRIPT_DIR/install/osx.sh"
+if [ "$(uname)" != "Darwin" ]; then
+    echo "\033[31mThis dotfiles repo is macOS only.\033[0m"
+    exit 1
 fi
 
-echo "\033[33mDone.\033[0m"
+source "$SCRIPT_DIR/install/brew.sh"
+source "$SCRIPT_DIR/install/shell.sh"
+source "$SCRIPT_DIR/install/link.sh"
+source "$SCRIPT_DIR/install/rime.sh"
+source "$SCRIPT_DIR/install/osx.sh"
+source "$SCRIPT_DIR/install/service.sh"
+
+echo "\033[33mDone. Post-install steps:\033[0m"
+echo "  1. Run 'upyabai' to update yabai sudoers hash"
+echo "  2. Update sync_dir in ~/Library/Rime/installation.yml"
+echo "  3. Log out and back in if Rime doesn't work"
