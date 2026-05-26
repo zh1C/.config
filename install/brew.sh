@@ -1,5 +1,19 @@
 #!/bin/zsh
 
+clone_or_pull() {
+	local repo=$1
+	local dest=$2
+	local opts=$3
+	if [[ -d "$dest/.git" ]]; then
+		git -C "$dest" pull
+	elif [[ -d "$dest" ]]; then
+		rm -rf "$dest"
+		git clone $opts "$repo" "$dest"
+	else
+		git clone $opts "$repo" "$dest"
+	fi
+}
+
 which brew &>/dev/null
 
 if [[ $? != 0 ]]; then
@@ -33,7 +47,7 @@ brew install zoxide
 brew install jenv
 brew install pyenv
 brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
-brew telnet
+brew install telnet
 
 valid_installed() {
 	local util
@@ -104,8 +118,8 @@ launch_service "skhd"
 
 # cask
 brew install --cask alacritty
-brew tap caskroom/fonts && brew install --cask font-hack-nerd-font
-brew tap homebrew/cask-fonts && brew install font-lxgw-wenkai
+brew install --cask font-hack-nerd-font
+brew install --cask font-lxgw-wenkai
 brew install --cask stats
 brew install --cask raycast
 brew install --cask visual-studio-code
@@ -118,7 +132,7 @@ valid_installed "alacritty"
 echo "\033[33mStart Rime configuration.\033[0m"
 
 echo "\033[32mClone plum.\033[0m"
-git clone --depth=1 https://github.com/rime/plum "$HOME/.config/plum"
+clone_or_pull "https://github.com/rime/plum" "$HOME/.config/plum" "--depth=1"
 
 echo "\033[32mRemove Rime default configurations.\033[0m"
 
@@ -146,14 +160,14 @@ brew install tmux
 
 valid_installed "tmux"
 
-git clone https://github.com/gpakosz/.tmux.git "$HOME/.config/tmux/.tmux"
+clone_or_pull "https://github.com/gpakosz/.tmux.git" "$HOME/.config/tmux/.tmux"
 
-if [[ ! -e "$XDG_CONFIG_HOME/tmux/tmux.conf" ]]; then
+if [[ ! -e "$HOME/.config/tmux/tmux.conf" ]]; then
 	ln -s "$HOME/.config/tmux/.tmux/.tmux.conf" "$HOME/.config/tmux/tmux.conf"
 	echo "\033[32mCreate tmux.conf\033[0m"
 fi
 
-if [[ ! -e "$XDG_CONFIG_HOME/tmux/tmux.conf.local" ]]; then
+if [[ ! -e "$HOME/.config/tmux/tmux.conf.local" ]]; then
 	cp "$HOME/.config/tmux/.tmux/.tmux.conf.local" "$HOME/.config/tmux/tmux.conf.local"
 	echo "\033[32mCreate tmux.conf.local\033[0m"
 fi
@@ -167,6 +181,6 @@ RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/
 
 # install ohmyzsh plugins
 export ZSH_CUSTOM="$HOME/.config/oh-my-zsh/custom"
-git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
-git clone https://github.com/Aloxaf/fzf-tab "$ZSH_CUSTOM/plugins/fzf-tab"
+clone_or_pull "https://github.com/zsh-users/zsh-autosuggestions" "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
+clone_or_pull "https://github.com/zsh-users/zsh-syntax-highlighting.git" "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+clone_or_pull "https://github.com/Aloxaf/fzf-tab" "$ZSH_CUSTOM/plugins/fzf-tab"

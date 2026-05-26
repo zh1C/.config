@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 echo "\033[33mInstalling dotfiles.\033[0m"
 
 echo "\033[32mConfiguring zsh as default shell.\033[0m"
@@ -19,10 +21,10 @@ if [ "$(uname)" == "Darwin" ]; then
 	source "$HOME/.zprofile"
 
 	echo "\033[33mBrewing all the things.\033[0m"
-	source ./install/brew.sh
+	source "$SCRIPT_DIR/install/brew.sh"
 
 	echo "\033[33mUpdating OSX settings.\033[0m"
-	source ./install/osx.sh
+	source "$SCRIPT_DIR/install/osx.sh"
 fi
 
 echo "\033[33mDone.\033[0m"
