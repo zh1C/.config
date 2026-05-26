@@ -2,10 +2,13 @@
 
 which brew &>/dev/null
 
-if [[ $? != 0 ]]; then 
+if [[ $? != 0 ]]; then
     echo "\033[32mInstalling homebrew\033[0m"
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> $HOME/.zprofile
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+	if ! grep -q 'eval $(/opt/homebrew/bin/brew shellenv)' "$HOME/.zprofile" 2>/dev/null; then
+		echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> $HOME/.zprofile
+	fi
 fi
 
 echo "\033[33mInstalling homebrew packages...\033[0m"
@@ -121,10 +124,8 @@ git clone --depth=1 https://github.com/rime/plum "$HOME/.config/plum"
 
 echo "\033[32mRemove Rime default configurations.\033[0m"
 
-if [[ -d "$HOME/Library/Rime" ]]; then 
-	rm -rf "$HOME/Library/Rime"
-	mkdir "$HOME/Library/Rime"
-fi
+rm -rf "$HOME/Library/Rime"
+mkdir -p "$HOME/Library/Rime"
 
 echo "\033[32mInstall rime-ice.\033[0m"
 bash $HOME/.config/plum/rime-install iDvel/rime-ice:others/recipes/full
@@ -167,6 +168,7 @@ fi
 RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # install ohmyzsh plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
+export ZSH_CUSTOM="$HOME/.config/oh-my-zsh/custom"
+git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+git clone https://github.com/Aloxaf/fzf-tab "$ZSH_CUSTOM/plugins/fzf-tab"
