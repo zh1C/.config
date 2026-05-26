@@ -1,6 +1,6 @@
 [mgr]
-# show hidden file
 show_hidden = true
+show_symlink = true
 
 [[plugin.prepend_fetchers]]
 url   = "*"
