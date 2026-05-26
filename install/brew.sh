@@ -50,6 +50,7 @@ brew install pyenv-virtualenv
 brew install thefuck
 brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
 brew install telnet
+brew install sesh
 
 valid_installed() {
 	local util
@@ -100,6 +101,7 @@ brew install koekeishiya/formulae/skhd
 
 valid_installed "yabai"
 valid_installed "skhd"
+valid_installed "sesh"
 
 launch_service() {
 	local service
@@ -107,9 +109,9 @@ launch_service() {
 	launchctl list | grep $service &>/dev/null
 	if [[ $? != 0 ]]; then
 		$service --start-service
-		echo "\033[34mStart yabai service.\033[0m"
+		echo "\033[34mStart $service service.\033[0m"
 	else
-		echo "\033[34mRestart yabai service.\033[0m"
+		echo "\033[34mRestart $service service.\033[0m"
 		$service --restart-service
 	fi
 }
@@ -182,3 +184,10 @@ export ZSH_CUSTOM="$HOME/.config/oh-my-zsh/custom"
 clone_or_pull "https://github.com/zsh-users/zsh-autosuggestions" "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
 clone_or_pull "https://github.com/zsh-users/zsh-syntax-highlighting.git" "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
 clone_or_pull "https://github.com/Aloxaf/fzf-tab" "$ZSH_CUSTOM/plugins/fzf-tab"
+
+# nvm
+if [[ ! -d "$HOME/.config/nvm" ]]; then
+	export NVM_DIR="$HOME/.config/nvm"
+	mkdir -p "$NVM_DIR"
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | PROFILE=/dev/null bash
+fi

@@ -6,7 +6,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="ys"
+ZSH_THEME=""
 
 # ohmyzsh plugin fzf config
 # export FZF_BASE="/opt/homebrew/bin/fzf"
@@ -19,29 +19,27 @@ ZSH_THEME="ys"
 zstyle ':omz:lib:directories' aliases no
 
 # zsh-syntax-highlighting must be the last plugin sourced.
-plugins=(git 
-		# fzf 
+plugins=(git
+		# fzf
 		# vi-mode
 		macos
 		fzf-tab
-		zsh-autosuggestions 
+		zsh-autosuggestions
 		zsh-syntax-highlighting
 		)
 
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+
 source $ZSH/oh-my-zsh.sh
+
+_comp_options+=(globdots)
 
 # History in cache directory.
 [[ -d ~/.cache/zsh ]] || mkdir -p ~/.cache/zsh
 HISTSIZE=30000
 SAVEHIST=30000
 HISTFILE=~/.cache/zsh/history
-
-# Basic auto/tab complete.
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots) # Include hidden files
 
 # vi mode
 bindkey -v
@@ -105,13 +103,13 @@ function y() {
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # starship load
-eval "$(starship init zsh)"
+command -v starship &>/dev/null && eval "$(starship init zsh)"
 
 # zoxide load
-eval "$(zoxide init zsh)"
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
 
 # mcfly load
-eval "$(mcfly init zsh)"
+command -v mcfly &>/dev/null && eval "$(mcfly init zsh)"
 
 # disable brew auto update
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -130,12 +128,12 @@ fi
 # eval "$(goenv init -)"
 
 # jenv
-eval "$(jenv init -)"
+command -v jenv &>/dev/null && eval "$(jenv init -)"
 
 command -v thefuck &>/dev/null && eval $(thefuck --alias)
 
 # pnpm
-export PNPM_HOME="/Users/narcissus/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
