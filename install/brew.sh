@@ -59,13 +59,16 @@ valid_installed "neofetch"
 valid_installed "zoxide"
 valid_installed "telnet"
 
-# neovim
-if [[ ! -d "$HOME/.config/nvim" ]]; then
-	mkdir "$HOME/.config/nvim"
-fi
-
 # clone nvim configurations
-git clone https://github.com/zh1C/neovim-config.git "$HOME/.config/nvim"
+if [[ -d "$HOME/.config/nvim/.git" ]]; then
+	echo "\033[32mnvim config already exists, pulling latest...\033[0m"
+	git -C "$HOME/.config/nvim" pull
+elif [[ ! -d "$HOME/.config/nvim" ]]; then
+	git clone https://github.com/zh1C/neovim-config.git "$HOME/.config/nvim"
+else
+	rm -rf "$HOME/.config/nvim"
+	git clone https://github.com/zh1C/neovim-config.git "$HOME/.config/nvim"
+fi
 
 
 # ranger plugins
@@ -127,20 +130,14 @@ echo "\033[32mInstall rime-ice.\033[0m"
 bash $HOME/.config/plum/rime-install iDvel/rime-ice:others/recipes/full
 
 # Create soft link
-if [[ -f "$HOME/Library/Rime/default.custom.yaml" ]]; then
-	rm -f "$HOME/Library/Rime/default.custom.yaml"
-	ln -s "$HOME/.config/rimeconf/default.custom.yaml" "$HOME/Library/Rime/default.custom.yaml"
-fi
+rm -f "$HOME/Library/Rime/default.custom.yaml"
+ln -s "$HOME/.config/rimeconf/default.custom.yaml" "$HOME/Library/Rime/default.custom.yaml"
 
-if [[ -f "$HOME/Library/Rime/squirrel.custom.yaml" ]]; then
-	rm -f "$HOME/Library/Rime/squirrel.custom.yaml"
-	ln -s "$HOME/.config/rimeconf/squirrel.custom.yaml" "$HOME/Library/Rime/squirrel.custom.yaml"
-fi
+rm -f "$HOME/Library/Rime/squirrel.custom.yaml"
+ln -s "$HOME/.config/rimeconf/squirrel.custom.yaml" "$HOME/Library/Rime/squirrel.custom.yaml"
 
-if [[ -f "$HOME/Library/Rime/rime_ice.custom.yaml" ]]; then
-	rm -f "$HOME/Library/Rime/rime_ice.custom.yaml"
-	ln -s "$HOME/.config/rimeconf/rime_ice.custom.yaml" "$HOME/Library/Rime/rime_ice.custom.yaml"
-fi
+rm -f "$HOME/Library/Rime/rime_ice.custom.yaml"
+ln -s "$HOME/.config/rimeconf/rime_ice.custom.yaml" "$HOME/Library/Rime/rime_ice.custom.yaml"
 
 echo "\033[31mFinished Rime configurations. Don't forget to update sync_dir in installation.yml.\033[0m"
 echo "\033[31mNotes:If you cannot use Rime, please log out.\033[0m"
@@ -167,7 +164,7 @@ if [[ $ZSH == "" ]]; then
 	export ZSH="$HOME/.config/oh-my-zsh"
 fi
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # install ohmyzsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
