@@ -52,7 +52,9 @@
 !/btop/btop.conf
 !/btop/themes
 
-!/neofetch
+!/fastfetch
+/fastfetch/*
+!/fastfetch/config.jsonc
 
 !/install
 

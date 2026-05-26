@@ -114,8 +114,8 @@ command -v mcfly &>/dev/null && eval "$(mcfly init zsh)"
 # disable brew auto update
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-# Start neofetch when open the terminal.
-# neofetch
+# Start fastfetch when open the terminal.
+# fastfetch
 
 # pyenv
 if command -v pyenv &>/dev/null; then
