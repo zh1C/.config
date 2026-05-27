@@ -3,6 +3,7 @@ idiomatic_version_file = true
 auto_install = false
 
 [tools]
+go = "1.26.3"
 java = "zulu-8"
 node = "20"
 python = "3.9.18"
