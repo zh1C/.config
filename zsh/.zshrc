@@ -130,6 +130,9 @@ fi
 # jenv
 command -v jenv &>/dev/null && eval "$(jenv init -)"
 
+# mise (polyglot version manager, loaded last to take PATH precedence)
+command -v mise &>/dev/null && eval "$(mise activate zsh)"
+
 command -v thefuck &>/dev/null && eval $(thefuck --alias)
 
 # pnpm
