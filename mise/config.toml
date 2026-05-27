@@ -1,6 +1,7 @@
 [settings]
 idiomatic_version_file = true
 auto_install = false
+default_config_filename = ".mise.toml"
 
 [tools]
 go = "1.26.3"
