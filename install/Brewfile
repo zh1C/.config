@@ -35,6 +35,7 @@ brew "gh"
 brew "uv"
 brew "oven-sh/bun/bun"
 brew "chafa"
+brew "mitmproxy"
 brew "openjdk@17"
 
 # macOS window management
