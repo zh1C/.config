@@ -1,4 +1,5 @@
 command_timeout = 10000
+continuation_prompt = '▶▶ '
 
 [character]
 success_symbol = "[❯](bold green)"
