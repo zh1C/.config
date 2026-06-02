@@ -1,4 +1,10 @@
 command_timeout = 10000
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold yellow)"
+
 [aws]
 symbol = " "
 
@@ -32,6 +38,9 @@ symbol = " "
 [git_branch]
 symbol = " "
 
+[git_metrics]
+disabled = false
+
 [golang]
 symbol = " "
 
@@ -61,6 +70,12 @@ symbol = " "
 
 [memory_usage]
 symbol = "󰍛 "
+
+[mise]
+disabled = false
+symbol = "mise "
+style = "bold purple"
+format = " [$symbol$health]($style)"
 
 [meson]
 symbol = "󰔷 "

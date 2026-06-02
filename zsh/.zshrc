@@ -62,6 +62,7 @@ function zle-keymap-select {
 		 [[ ${KEYMAP} == '' ]] || [[ $1 = 'beam' ]]; then
 		echo -ne '\e[5 q'
 	fi
+	zle reset-prompt
 }
 zle -N zle-keymap-select
 zle-line-init() {
