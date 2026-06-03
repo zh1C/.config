@@ -1,0 +1,18 @@
+# 字体
+font-family = "Hack Nerd Font Mono"
+font-size = 16
+
+# 窗口
+window-padding-x = 18
+window-padding-y = 16
+background-opacity = 0.85
+macos-titlebar-style = hidden
+
+# 终端类型
+term = xterm-256color
+
+# tmux 键位映射（对应原 Alacritty 把 Cmd 翻译成 tmux 前缀 Ctrl-S 的写法）
+# \x13 = Ctrl-S（你的 tmux prefix）
+keybind = cmd+t=text:\x13c
+keybind = cmd+j=text:\x13T
+keybind = cmd+w=text:\x13x

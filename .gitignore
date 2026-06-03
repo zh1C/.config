@@ -47,6 +47,11 @@
 /alacritty/*
 !/alacritty/alacritty.toml
 
+# do not ignore ghostty config
+!/ghostty
+/ghostty/*
+!/ghostty/config
+
 !/btop
 /btop/*
 !/btop/btop.conf

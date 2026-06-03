@@ -44,6 +44,7 @@ brew "koekeishiya/formulae/skhd"
 
 # GUI applications
 cask "alacritty"
+cask "ghostty"
 cask "font-hack-nerd-font"
 cask "font-lxgw-wenkai"
 cask "stats"
