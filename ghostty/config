@@ -1,18 +1,48 @@
 # 字体
 font-family = "Hack Nerd Font Mono"
 font-size = 16
+# 字形描边加粗
+font-thicken = true
 
 # 窗口
 window-padding-x = 18
 window-padding-y = 16
 background-opacity = 0.85
 macos-titlebar-style = hidden
+background-blur = true
 
 # 终端类型
 term = xterm-256color
+
+# 鼠标 / 剪贴板
+# 打字时隐藏鼠标指针
+mouse-hide-while-typing = true
+# 选中即复制到系统剪贴板
+copy-on-select = clipboard
+
+# 行为
+# Option 作为 Alt 发送转义，保证 tmux/nvim 的 Alt 键位生效
+macos-option-as-alt = true
+# 重启后恢复之前的窗口
+window-save-state = always
+# 更新交给 brew 管理，关闭内置自动更新
+auto-update = off
+# 用 tmux 管理会话，关闭窗口不再二次确认
+confirm-close-surface = false
 
 # tmux 键位映射（对应原 Alacritty 把 Cmd 翻译成 tmux 前缀 Ctrl-S 的写法）
 # \x13 = Ctrl-S（你的 tmux prefix）
 keybind = cmd+t=text:\x13c
 keybind = cmd+j=text:\x13T
 keybind = cmd+w=text:\x13x
+
+# 下拉终端（quick terminal）
+# 全局热键 Cmd+` 呼出/收起，未聚焦 Ghostty 也生效（首次需授予辅助功能权限）
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+quick-terminal-position = top
+quick-terminal-size = 40%
+quick-terminal-animation-duration = 0.1
+# 跟随到当前桌面空间，全屏 App 上也能呼出
+quick-terminal-space-behavior = move
+# 失焦自动收起；想常驻改为 false
+quick-terminal-autohide = true
