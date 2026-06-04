@@ -77,3 +77,8 @@
 
 # yazi
 !/yazi
+
+# raycast: 仅追踪自定义脚本，忽略 ai/extensions
+!/raycast
+/raycast/*
+!/raycast/scripts

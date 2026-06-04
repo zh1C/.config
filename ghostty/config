@@ -24,7 +24,7 @@ copy-on-select = clipboard
 # Option 作为 Alt 发送转义，保证 tmux/nvim 的 Alt 键位生效
 macos-option-as-alt = true
 # 重启后恢复之前的窗口
-window-save-state = always
+window-save-state = never
 # 更新交给 brew 管理，关闭内置自动更新
 auto-update = off
 # 用 tmux 管理会话，关闭窗口不再二次确认
