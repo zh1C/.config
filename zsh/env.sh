@@ -55,3 +55,6 @@ export NVM_DIR="$HOME/.config/nvm"
 export PATH="$PATH:$HOME/.jenv/bin"
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# Rust / Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
