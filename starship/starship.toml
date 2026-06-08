@@ -6,6 +6,21 @@ success_symbol = "[❯](bold green)"
 error_symbol = "[❯](bold red)"
 vimcmd_symbol = "[❮](bold yellow)"
 
+[status]
+disabled = false
+map_symbol = true            # 按错误类型显示不同符号
+pipestatus = true            # 显示管道里每段命令的退出码
+recognize_signal_code = true # 退出码翻译成信号名
+format = '[$symbol$common_meaning$signal_name$maybe_int]($style) '
+pipestatus_format = '\[$pipestatus\] => [$symbol$common_meaning$signal_name$maybe_int]($style) '
+symbol = "✘ "
+success_symbol = ""          # 成功不显示,保持干净
+not_executable_symbol = " "  # nf-fa-lock 不可执行/无权限
+not_found_symbol = " "       # nf-fa-search 命令未找到
+sigint_symbol = " "          # nf-fa-ban Ctrl-C 中断
+signal_symbol = " "          # nf-fa-bolt 其它信号
+style = "bold red"
+
 [aws]
 symbol = " "
 
