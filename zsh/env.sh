@@ -18,6 +18,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # starship config directory
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
+# mise: 让 `mise use` 写入 .mise.toml(必须用 env 变量,settings 里设无效)
+export MISE_DEFAULT_CONFIG_FILENAME=".mise.toml"
+
 # bin/t
 export PATH=$PATH:$HOME/.config/zsh/bin
 

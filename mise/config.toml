@@ -1,7 +1,7 @@
 [settings]
-idiomatic_version_file = true
+# 仅对指定工具解析 .node-version/.python-version 等第三方版本文件
+idiomatic_version_file_enable_tools = ["node", "python"]
 auto_install = false
-default_config_filename = ".mise.toml"
 
 [tools]
 go = "1.26.3"
