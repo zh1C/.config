@@ -47,11 +47,4 @@ clone_or_pull "https://github.com/zsh-users/zsh-autosuggestions" "$ZSH_CUSTOM/pl
 clone_or_pull "https://github.com/zsh-users/zsh-syntax-highlighting.git" "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
 clone_or_pull "https://github.com/Aloxaf/fzf-tab" "$ZSH_CUSTOM/plugins/fzf-tab"
 
-# nvm
-if [[ ! -d "$HOME/.config/nvm" ]]; then
-    export NVM_DIR="$HOME/.config/nvm"
-    mkdir -p "$NVM_DIR"
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | PROFILE=/dev/null bash
-fi
-
 echo "\033[32mShell environment configured.\033[0m"

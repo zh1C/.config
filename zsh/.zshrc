@@ -99,10 +99,6 @@ function y() {
 # [ -f "$HOME/.config/zsh/fzfrc" ] && source "$HOME/.config/zsh/fzfrc"
 # [ -f "$HOME/.config/zsh/.fzf.sh" ] && source "$HOME/.config/zsh/.fzf.sh"
 
-# nvm loads
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # starship load
 command -v starship &>/dev/null && eval "$(starship init zsh)"
 
@@ -118,20 +114,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # Start fastfetch when open the terminal.
 # fastfetch
 
-# pyenv
-if command -v pyenv &>/dev/null; then
-    eval "$(pyenv init --path)"
-    eval "$(pyenv init -)"
-    pyenv commands | grep -q virtualenv-init && eval "$(pyenv virtualenv-init -)"
-fi
-
-# go env
-# eval "$(goenv init -)"
-
-# jenv
-command -v jenv &>/dev/null && eval "$(jenv init -)"
-
-# mise (polyglot version manager, loaded last to take PATH precedence)
+# mise (polyglot version manager — single source of truth for go/java/node/python)
 command -v mise &>/dev/null && eval "$(mise activate zsh)"
 
 command -v thefuck &>/dev/null && eval $(thefuck --alias)
