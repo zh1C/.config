@@ -9,12 +9,12 @@ if [ "$(uname)" != "Darwin" ]; then
     exit 1
 fi
 
-source "$SCRIPT_DIR/install/brew.sh"
-source "$SCRIPT_DIR/install/shell.sh"
-source "$SCRIPT_DIR/install/link.sh"
-source "$SCRIPT_DIR/install/rime.sh"
-source "$SCRIPT_DIR/install/osx.sh"
-source "$SCRIPT_DIR/install/service.sh"
+source "$SCRIPT_DIR/brew.sh"
+source "$SCRIPT_DIR/shell.sh"
+source "$SCRIPT_DIR/link.sh"
+source "$SCRIPT_DIR/rime.sh"
+source "$SCRIPT_DI/osx.sh"
+source "$SCRIPT_DI/service.sh"
 
 echo "\033[33mDone. Post-install steps:\033[0m"
 echo "  1. Run 'upyabai' to update yabai sudoers hash"
