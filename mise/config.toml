@@ -2,9 +2,10 @@
 # 仅对指定工具解析 .node-version/.python-version 等第三方版本文件
 idiomatic_version_file_enable_tools = ["node", "python"]
 auto_install = false
+python.github_attestations = false
 
 [tools]
-go = "1.26.3"
+go = "1.23.12"
 java = "zulu-8"
 node = "20"
 python = "3.9.18"
