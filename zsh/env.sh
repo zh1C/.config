@@ -54,3 +54,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Rust / Cargo
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# HomeBrew
+export HOMEBREW_NO_ASK=1
