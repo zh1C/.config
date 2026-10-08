@@ -1,2 +1,10 @@
 [core.option]
 protocol = "iterm"
+initial_selection = "head"
+order = "topo"
+
+[core.search]
+ignore_case = true
+
+[ui.list]
+scrolloff = 4
