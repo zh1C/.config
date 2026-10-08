@@ -77,6 +77,8 @@
 
 # yazi
 !/yazi
+/yazi/flavors/
+/yazi/plugins/
 
 # raycast: 仅追踪自定义脚本，忽略 ai/extensions
 !/raycast
