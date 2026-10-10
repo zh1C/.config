@@ -10,3 +10,8 @@ require("full-border"):setup {
 	type = ui.Border.ROUNDED,
 }
 
+-- zoxide
+require("zoxide"):setup {
+	update_db = true,
+}
+
