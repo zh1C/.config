@@ -37,3 +37,6 @@ alias upyabai='echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(whi
 
 # cfr
 alias cfr='java -jar /opt/homebrew/Cellar/cfr-decompiler/0.152/libexec/cfr-0.152.jar'
+
+# git log --graph alias
+alias glg='serie'
